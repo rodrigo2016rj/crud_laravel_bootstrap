@@ -1,0 +1,358 @@
+#div_pagina_listar_pessoas{
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px 10px 50px 10px;
+  max-width: 1020px;
+}
+@media (max-width: 640px){
+  #div_pagina_listar_pessoas{
+    padding: 15px 10px 10px 10px;
+  }
+}
+
+/* Opções da página */
+#div_opcoes_da_pagina{
+  margin-top: 10px;
+}
+#h3_titulo_das_opcoes_da_pagina{
+  font-size: 18pt;
+}
+#div_lista_de_opcoes_da_pagina{
+  margin-top: 10px;
+}
+
+/* Formulário de filtros */
+#form_filtros{
+  margin-top: 25px;
+  border-top: 1px solid #6D6D6D;
+  padding-top: 8px;
+}
+#h3_titulo_dos_filtros{
+  font-size: 18pt;
+}
+.parte_do_formulario{
+  margin-top: 20px !important;
+}
+#div_campo_filtro_data_de_nascimento{
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+#campo_filtro_data_de_nascimento{
+  display: block;
+  float: left;
+}
+#span_icone_de_calendario_do_campo_filtro_data_de_nascimento{
+  display: block;
+  position: relative;
+  top: 3px;
+  left: calc(100% - 32px - 2px);
+  width: 32px;
+  height: 32px;
+  background-color: var(--bs-form-control-bg);
+  background-image: url("../../build/assets/calendar3-2c387a9a.svg");
+  background-size: cover;
+  filter: invert(1) brightness(0.5) sepia(1) hue-rotate(15deg) saturate(1) invert(1);
+  cursor: pointer;
+}
+#botao_buscar{
+  border-color: #186018;
+  background-color: #308830;
+  color: #FFF;
+}
+#botao_buscar:hover{
+  background-color: #307430;
+  color: #FFF;
+}
+#botao_buscar:active{
+  background-color: #1D601D;
+  color: #FFF;
+}
+#botao_limpar{
+  margin-left: 15px;
+  border-color: #603030;
+  background-color: #A84848;
+  color: #FFF;
+}
+#botao_limpar:hover{
+  background-color: #984848;
+  color: #FFF;
+}
+#botao_limpar:active{
+  background-color: #803838;
+  color: #FFF;
+}
+
+/* Lista de pessoas */
+#div_local_da_lista_de_pessoas{
+  margin-top: 25px;
+  border-top: 1px solid #6D6D6D;
+  padding-top: 8px;
+}
+#h3_titulo_da_lista_de_pessoas{
+  margin-bottom: 10px;
+  font-size: 18pt;
+}
+#div_paginacao_de_cima_da_lista_de_pessoas{
+  text-align: center;
+}
+@media (max-width: 640px){
+  #div_paginacao_de_cima_da_lista_de_pessoas{
+    position: relative;
+    padding-bottom: 10px;
+    font-size: 10.5pt;
+    white-space: nowrap;
+    overflow: auto;
+    z-index: 1;
+  }
+}
+.primeira_pagina,
+.primeira_pagina:visited{
+  display: inline-block;
+  padding: 2px 3px;
+  vertical-align: top;
+  color: #282880;
+}
+.primeira_pagina:hover{
+  background-color: #484880;
+  color: #F8F8F8;
+  text-decoration: none;
+}
+.pagina_anterior,
+.pagina_anterior:visited{
+  display: inline-block;
+  padding: 2px 3px;
+  vertical-align: top;
+  color: #282880;
+}
+.pagina_anterior:hover{
+  background-color: #484880;
+  color: #F8F8F8;
+  text-decoration: none;
+}
+.pagina,
+.pagina:visited{
+  display: inline-block;
+  padding: 2px 3px;
+  vertical-align: top;
+  color: #282880;
+}
+.pagina:hover{
+  background-color: #484880;
+  color: #F8F8F8;
+  text-decoration: none;
+}
+.pagina_selecionada,
+.pagina_selecionada:visited{
+  display: inline-block;
+  padding: 2px 3px;
+  vertical-align: top;
+  color: #282880;
+  text-shadow: 1px 0px 0px #282880;
+}
+.pagina_selecionada:hover{
+  background-color: #484880;
+  color: #F8F8F8;
+  text-decoration: none;
+}
+.pagina_seguinte,
+.pagina_seguinte:visited{
+  display: inline-block;
+  padding: 2px 3px;
+  vertical-align: top;
+  color: #282880;
+}
+.pagina_seguinte:hover{
+  background-color: #484880;
+  color: #F8F8F8;
+  text-decoration: none;
+}
+.ultima_pagina,
+.ultima_pagina:visited{
+  display: inline-block;
+  padding: 2px 3px;
+  vertical-align: top;
+  color: #282880;
+}
+.ultima_pagina:hover{
+  background-color: #484880;
+  color: #F8F8F8;
+  text-decoration: none;
+}
+#div_partes_da_lista_de_pessoas{
+  margin-left: 0px;
+  border: 1px solid #E0E0F4;
+  max-width: 100%;
+  min-height: 35px;
+  background-color: #F0F0FF;
+}
+#div_partes_da_lista_de_pessoas>*{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.parte_da_lista{
+  cursor: pointer;
+}
+#div_parte_opcoes_da_lista_de_pessoas{
+  text-align: right;
+  cursor: initial;
+}
+.pessoa.row{
+  margin-top: 0px;
+  margin-left: 0px;
+  border-right: 1px solid #E0E0F4;
+  border-bottom: 1px solid #E0E0F4;
+  border-left: 1px solid #E0E0F4;
+  padding: 8px 0px;
+  max-width: 100%;
+  min-height: 63px;
+}
+.pessoa.impar{
+  background-color: #F8F8FF;
+}
+.pessoa.par{
+  background-color: #FFF;
+}
+.pessoa.row>*:first-child{
+  margin-top: 0px !important;
+}
+.local_do_nome_da_pessoa{
+  word-wrap: break-word;
+}
+.local_do_contato_da_pessoa{
+  word-wrap: break-word;
+}
+.contato_da_pessoa{
+  margin-top: 8px;
+}
+.contato_da_pessoa:first-child{
+  margin-top: 0px;
+}
+.local_das_opcoes_do_item_da_lista{
+  gap: calc(1.5rem / 2);
+}
+.tooltip_link_da_opcao_da_lista{
+  --bs-tooltip-opacity: 1 !important;
+}
+.link_editar_pessoa{
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  background-color: transparent;
+  background-image: url("../../build/assets/pencil-9d0227c6.svg");
+  background-size: cover;
+  filter: invert(1) brightness(0.37) sepia(1) hue-rotate(88deg) saturate(2);
+  cursor: pointer;
+}
+.link_excluir_pessoa{
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  background-color: transparent;
+  background-image: url("../../build/assets/x-48d5345d.svg");
+  background-size: 52px;
+  background-position: -10px -8px;
+  filter: invert(1) brightness(0.3) sepia(1) hue-rotate(300deg) saturate(4);
+  cursor: pointer;
+}
+#div_mensagem_quando_nao_ha_pessoas{
+  border-right: 1px solid #E0E0F4;
+  border-bottom: 1px solid #E0E0F4;
+  border-left: 1px solid #E0E0F4;
+  padding: 10px 8px;
+  text-align: center;
+}
+#div_paginacao_de_baixo_da_lista_de_pessoas{
+  text-align: center;
+}
+@media (max-width: 640px){
+  #div_paginacao_de_baixo_da_lista_de_pessoas{
+    position: relative;
+    padding-bottom: 10px;
+    font-size: 10.5pt;
+    white-space: nowrap;
+    overflow: auto;
+    z-index: 1;
+  }
+}
+
+/* Calendário */
+#div_calendario{
+  position: absolute;
+  border: 1px solid #9090C8;
+  padding: 12px 8px;
+  width: auto;
+  background-color: #F0F0FF;
+  z-index: 1;
+}
+#span_titulo_do_calendario{
+  font-size: 14pt;
+}
+#caixa_de_selecao_de_mes_do_calendario{
+  display: inline;
+  width: 120px;
+}
+#caixa_de_selecao_de_ano_do_calendario{
+  display: inline;
+  width: 90px;
+}
+#div_corpo_do_calendario{
+  margin-top: 12px;
+}
+#div_dias_do_calendario{
+  border-top: 1px dashed #7070C0;
+  border-left: 1px dashed #7070C0;
+  min-width: 330px;
+  max-width: 330px;
+  overflow: hidden;
+}
+.celula_do_calendario{
+  float: left;
+  border-right: 1px dashed #7070C0;
+  border-bottom: 1px dashed #7070C0;
+  padding: 2px 2px 1px 3px;
+  min-width: 47px;
+  max-width: 47px;
+  min-height: 27px;
+  max-height: 27px;
+  text-align: center;
+}
+.dia_do_calendario>span{
+  position: relative;
+  top: 2px;
+}
+.dia_do_calendario:hover{
+  border: 1px solid #404070;
+  padding-top: 1px;
+  padding-left: 2px;
+  background-color: #FAFAFF;
+  cursor: pointer;
+}
+.dia_escolhido,
+.dia_escolhido:hover{
+  border-right: 1px solid #404070;
+  border-bottom: 1px solid #404070;
+  background-color: #404070;
+  color: #FFF;
+}
+#div_rodape_do_calendario{
+  margin-top: 12px;
+}
+#div_botoes_do_calendario{
+  text-align: center;
+}
+#botao_confirmar_do_calendario{
+  border: var(--bs-border-width) solid var(--bs-border-color);
+}
+#botao_confirmar_do_calendario:hover{
+  border-color: #303060;
+  background-color: #484898;
+  color: #FFF;
+}
+#botao_confirmar_do_calendario:active{
+  border-color: #303060;
+  background-color: #383880;
+  color: #FFF;
+}

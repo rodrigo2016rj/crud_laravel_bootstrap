@@ -1,0 +1,178 @@
+#div_pagina_cadastrar_pessoa{
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px 10px 30px 10px;
+  max-width: 820px;
+}
+@media (max-width: 640px){
+  #div_pagina_cadastrar_pessoa{
+    padding: 15px 10px 30px 10px;
+  }
+}
+
+/* Mensagem */
+#div_mensagem{
+  margin-top: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 500px;
+  max-width: 100%;
+  text-align: justify;
+}
+@media (max-width: 640px){
+  #div_mensagem{
+    margin-top: 20px;
+  }
+}
+.mensagem_de_sucesso{
+  color: var(--bs-success-text);
+}
+.mensagem_de_falha{
+  color: var(--bs-danger-text);
+}
+
+/* Formulário de cadastro */
+#form_cadastrar{
+  margin-top: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 400px;
+  max-width: 100%;
+}
+@media (max-width: 640px){
+  #form_cadastrar{
+    margin-top: 20px;
+  }
+}
+.marcador_de_obrigatoriedade{
+  color: var(--bs-danger-text);
+}
+.parte_do_formulario{
+  margin-top: 22px;
+}
+#div_campo_data_de_nascimento{
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+#campo_data_de_nascimento{
+  display: block;
+  float: left;
+}
+#span_icone_de_calendario_do_campo_data_de_nascimento{
+  display: block;
+  position: relative;
+  top: 3px;
+  left: calc(100% - 32px - 2px);
+  width: 32px;
+  height: 32px;
+  background-color: var(--bs-form-control-bg);
+  background-image: url("../../build/assets/calendar3-2c387a9a.svg");
+  background-size: cover;
+  filter: invert(1) brightness(0.5) sepia(1) hue-rotate(15deg) saturate(1) invert(1);
+  cursor: pointer;
+}
+.tooltip_descricao_do_setor{
+  max-width: 300px;
+}
+.tooltip_descricao_do_setor>.tooltip-inner{
+  padding: 4px;
+  max-width: 300px;
+  font-size: 12pt;
+  text-align: left;
+}
+#div_botao_cadastrar{
+  margin-top: 30px;
+}
+#botao_cadastrar{
+  border-color: #303060;
+  background-color: #5858A8;
+  color: #FFF;
+}
+#botao_cadastrar:hover{
+  background-color: #484898;
+  color: #FFF;
+}
+#botao_cadastrar:active{
+  background-color: #383880;
+  color: #FFF;
+}
+
+/* Calendário */
+#div_calendario{
+  position: absolute;
+  border: 1px solid #9090C8;
+  padding: 12px 8px;
+  width: auto;
+  background-color: #F0F0FF;
+  z-index: 1;
+}
+#span_titulo_do_calendario{
+  font-size: 14pt;
+}
+#caixa_de_selecao_de_mes_do_calendario{
+  display: inline;
+  width: 120px;
+}
+#caixa_de_selecao_de_ano_do_calendario{
+  display: inline;
+  width: 90px;
+}
+#div_corpo_do_calendario{
+  margin-top: 12px;
+}
+#div_dias_do_calendario{
+  border-top: 1px dashed #7070C0;
+  border-left: 1px dashed #7070C0;
+  min-width: 330px;
+  max-width: 330px;
+  overflow: hidden;
+}
+.celula_do_calendario{
+  float: left;
+  border-right: 1px dashed #7070C0;
+  border-bottom: 1px dashed #7070C0;
+  padding: 2px 2px 1px 3px;
+  min-width: 47px;
+  max-width: 47px;
+  min-height: 27px;
+  max-height: 27px;
+  text-align: center;
+}
+.dia_do_calendario>span{
+  position: relative;
+  top: 2px;
+}
+.dia_do_calendario:hover{
+  border: 1px solid #404070;
+  padding-top: 1px;
+  padding-left: 2px;
+  background-color: #FAFAFF;
+  cursor: pointer;
+}
+.dia_escolhido,
+.dia_escolhido:hover{
+  border-right: 1px solid #404070;
+  border-bottom: 1px solid #404070;
+  background-color: #404070;
+  color: #FFF;
+}
+#div_rodape_do_calendario{
+  margin-top: 12px;
+}
+#div_botoes_do_calendario{
+  text-align: center;
+}
+#botao_confirmar_do_calendario{
+  border: var(--bs-border-width) solid var(--bs-border-color);
+}
+#botao_confirmar_do_calendario:hover{
+  border-color: #303060;
+  background-color: #484898;
+  color: #FFF;
+}
+#botao_confirmar_do_calendario:active{
+  border-color: #303060;
+  background-color: #383880;
+  color: #FFF;
+}
