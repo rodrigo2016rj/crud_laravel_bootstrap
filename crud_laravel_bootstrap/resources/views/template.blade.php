@@ -7,6 +7,7 @@
     @vite(['resources/scripts/'.$visual_escolhido_template.'/template.js'])
     @section('head_especifico')
     @show
+    {{header('Cache-Control: no-store');}}
   </head>
   <body>
     <div id="div_corpo_template" class="conteiner-xxxl bg-light rounded-4">
