@@ -124,7 +124,7 @@ window.addEventListener("load", function(){
       div_calendario.style.top = posicao_y + "px";
       div_calendario.style.left = posicao_x + "px";
       if(window.innerWidth <= largura_do_calendario){
-        div_calendario.style.left = window.innerWidth / 2 - largura_do_calendario / 2 + "px";
+        div_calendario.style.left = "0px";
       }
       
       atualizar_calendario();
@@ -512,6 +512,32 @@ window.addEventListener("load", function(){
       div_calendario.classList.add("tag_oculta");
     }else{
       ocultar_div_calendario = true;
+    }
+  });
+  
+  /* Comportamento do calendário quando a janela é redimensionada */
+  window.addEventListener("resize", function(){
+    if(!div_calendario.classList.contains("tag_oculta")){
+      let posicao_x = campo_filtro_data_de_nascimento.getBoundingClientRect().left + window.scrollX;
+      let posicao_y = campo_filtro_data_de_nascimento.getBoundingClientRect().top + window.scrollY;
+      
+      var estilo_computado = window.getComputedStyle(campo_filtro_data_de_nascimento);
+      const largura_do_campo_alvo = parseInt(estilo_computado.width, 10);
+      posicao_y += parseInt(estilo_computado.height, 10);
+      
+      var estilo_computado = window.getComputedStyle(div_calendario);
+      const largura_do_calendario = parseInt(estilo_computado.width, 10);
+      var diferenca_de_larguras = largura_do_campo_alvo - largura_do_calendario;
+      if(posicao_x + diferenca_de_larguras / 2 >= 0){
+        posicao_x += diferenca_de_larguras / 2;
+      }
+      
+      div_calendario.style.position = "absolute";
+      div_calendario.style.top = posicao_y + "px";
+      div_calendario.style.left = posicao_x + "px";
+      if(window.innerWidth <= largura_do_calendario){
+        div_calendario.style.left = "0px";
+      }
     }
   });
 });

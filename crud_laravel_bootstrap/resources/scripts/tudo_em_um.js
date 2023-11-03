@@ -1739,7 +1739,7 @@ window.addEventListener("load", function(){
       div_calendario.style.top = posicao_y + "px";
       div_calendario.style.left = posicao_x + "px";
       if(window.innerWidth <= largura_do_calendario){
-        div_calendario.style.left = window.innerWidth / 2 - largura_do_calendario / 2 + "px";
+        div_calendario.style.left = "0px";
       }
       
       atualizar_calendario();
@@ -1937,6 +1937,67 @@ window.addEventListener("load", function(){
       div_calendario.classList.add("tag_oculta");
     }else{
       ocultar_div_calendario = true;
+    }
+  });
+  
+  /* Comportamento dos calendários quando a janela é redimensionada */
+  window.addEventListener("resize", function(){
+    if(!div_calendario.classList.contains("tag_oculta")){
+      let posicao_x = 0;
+      let posicao_y = 0;
+      
+      let campo_alvo = null;
+      switch(alvo_do_calendario){
+        case "filtro_data_de_nascimento":
+          div_pagina_tudo_em_um.appendChild(div_calendario);
+          campo_alvo = campo_filtro_data_de_nascimento;
+          
+          posicao_x += campo_alvo.getBoundingClientRect().left + window.scrollX;
+          posicao_y += campo_alvo.getBoundingClientRect().top + window.scrollY;
+        break;
+        case "cadastrar_data_de_nascimento":
+          div_tronco_do_popup_cadastrar_pessoa.appendChild(div_calendario);
+          campo_alvo = campo_data_de_nascimento;
+          
+          var estilo_computado = window.getComputedStyle(div_tronco_do_popup_cadastrar_pessoa);
+          posicao_x += parseInt(estilo_computado.paddingLeft, 10);
+          
+          posicao_y += campo_alvo.getBoundingClientRect().top;
+          posicao_y -= div_tronco_do_popup_cadastrar_pessoa.getBoundingClientRect().top;
+          posicao_y += div_tronco_do_popup_cadastrar_pessoa.scroll_y;
+        break;
+        case "editar_data_de_nascimento":
+          const div_tronco_do_popup_editar_pessoa = div_parte_util_do_popup_editar_pessoa.querySelector(".div_tronco_do_popup_editar_pessoa");
+          div_tronco_do_popup_editar_pessoa.appendChild(div_calendario);
+          campo_alvo = div_parte_util_do_popup_editar_pessoa.querySelector(".campo_data_de_nascimento");
+          
+          var estilo_computado = window.getComputedStyle(div_tronco_do_popup_editar_pessoa);
+          posicao_x += parseInt(estilo_computado.paddingLeft, 10);
+          
+          posicao_y += campo_alvo.getBoundingClientRect().top;
+          posicao_y -= div_tronco_do_popup_editar_pessoa.getBoundingClientRect().top;
+          posicao_y += div_tronco_do_popup_editar_pessoa.scroll_y;
+        break;
+      }
+      
+      var estilo_computado = window.getComputedStyle(campo_alvo);
+      const largura_do_campo_alvo = parseInt(estilo_computado.width, 10);
+      const altura_do_campo_alvo = parseInt(estilo_computado.height, 10);
+      posicao_y += altura_do_campo_alvo;
+      
+      var estilo_computado = window.getComputedStyle(div_calendario);
+      const largura_do_calendario = parseInt(estilo_computado.width, 10);
+      var diferenca_de_larguras = largura_do_campo_alvo - largura_do_calendario;
+      if(posicao_x + diferenca_de_larguras / 2 >= 0){
+        posicao_x += diferenca_de_larguras / 2;
+      }
+      
+      div_calendario.style.position = "absolute";
+      div_calendario.style.top = posicao_y + "px";
+      div_calendario.style.left = posicao_x + "px";
+      if(window.innerWidth <= largura_do_calendario){
+        div_calendario.style.left = "0px";
+      }
     }
   });
 });
