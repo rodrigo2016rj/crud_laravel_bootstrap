@@ -25,10 +25,10 @@
   }
 }
 .mensagem_de_sucesso{
-  color: var(--bs-success-text);
+  color: #007000;
 }
 .mensagem_de_falha{
-  color: var(--bs-danger-text);
+  color: #900000;
 }
 
 /* Formulário de cadastro */
@@ -45,7 +45,7 @@
   }
 }
 .marcador_de_obrigatoriedade{
-  color: var(--bs-danger-text);
+  color: #900000;
 }
 .parte_do_formulario{
   margin-top: 22px;
@@ -66,18 +66,18 @@
   left: calc(100% - 32px - 2px);
   width: 32px;
   height: 32px;
-  background-color: var(--bs-form-control-bg);
+  background-color: #FFF;
   background-image: url("../../build/assets/calendar3-2c387a9a.svg");
   background-size: cover;
   filter: invert(1) brightness(0.5) sepia(1) hue-rotate(15deg) saturate(1) invert(1);
   cursor: pointer;
 }
 .tooltip_descricao_do_setor{
-  max-width: 300px;
+  max-width: 290px;
 }
 .tooltip_descricao_do_setor>.tooltip-inner{
-  padding: 4px;
-  max-width: 300px;
+  padding: 5px;
+  max-width: 290px;
   font-size: 12pt;
   text-align: left;
 }

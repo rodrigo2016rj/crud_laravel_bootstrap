@@ -49,7 +49,7 @@
   left: calc(100% - 32px - 2px);
   width: 32px;
   height: 32px;
-  background-color: var(--bs-form-control-bg);
+  background-color: #FFF;
   background-image: url("../../build/assets/calendar3-2c387a9a.svg");
   background-size: cover;
   filter: invert(1) brightness(0.5) sepia(1) hue-rotate(15deg) saturate(1) invert(1);
@@ -300,15 +300,15 @@
   margin-top: 0px;
 }
 .mensagem_de_sucesso{
-  color: var(--bs-success-text);
+  color: #007000;
 }
 .mensagem_de_falha{
-  color: var(--bs-danger-text);
+  color: #900000;
 }
 
 /* Estilos comuns entre formulários */
 .marcador_de_obrigatoriedade{
-  color: var(--bs-danger-text);
+  color: #900000;
 }
 #span_status_cadastrar_pessoa_animado,
 .span_status_editar_pessoa_animado,
@@ -340,7 +340,7 @@
   left: calc(100% - 32px - 2px);
   width: 32px;
   height: 32px;
-  background-color: var(--bs-form-control-bg);
+  background-color: #FFF;
   background-image: url("../../build/assets/calendar3-2c387a9a.svg");
   background-size: cover;
   filter: invert(1) brightness(0.5) sepia(1) hue-rotate(15deg) saturate(1) invert(1);
@@ -417,7 +417,7 @@
   left: calc(100% - 32px - 2px);
   width: 32px;
   height: 32px;
-  background-color: var(--bs-form-control-bg);
+  background-color: #FFF;
   background-image: url("../../build/assets/calendar3-2c387a9a.svg");
   background-size: cover;
   filter: invert(1) brightness(0.5) sepia(1) hue-rotate(15deg) saturate(1) invert(1);

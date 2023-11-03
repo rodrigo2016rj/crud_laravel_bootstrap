@@ -25,10 +25,10 @@
   }
 }
 .mensagem_de_sucesso{
-  color: var(--bs-success-text);
+  color: #007000;
 }
 .mensagem_de_falha{
-  color: var(--bs-danger-text);
+  color: #900000;
 }
 
 /* Formulário de exclusão */

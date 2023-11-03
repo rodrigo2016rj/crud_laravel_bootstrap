@@ -1,5 +1,5 @@
 $body-bg: #484870;
-$emphasis-color: #484870;
+$body-emphasis-color: #484870;
 $light: #FFF;
 $tooltip-color: #FFF;
 
@@ -31,8 +31,13 @@ $container-max-widths:(
 
 @import "alias_bootstrap/scss/bootstrap.scss";
 
-:root{
-  --bs-form-control-bg: #FFF;
+.form-select,
+.form-check-input,
+.form-control,
+.form-select:focus,
+.form-check-input:focus,
+.form-control:focus{
+  background-color: #FFF;
 }
 .botao_basico{
   --bs-btn-border-color: #000;
