@@ -50,7 +50,7 @@
   width: 32px;
   height: 32px;
   background-color: #FFF;
-  background-image: url("../../build/assets/calendar3-2c387a9a.svg");
+  background-image: url("../../build/assets/calendar3-UCS1I2qc.svg");
   background-size: cover;
   filter: invert(1) brightness(0.5) sepia(1) hue-rotate(15deg) saturate(1) invert(1);
   cursor: pointer;
@@ -240,7 +240,7 @@
   height: 32px;
   vertical-align: middle;
   background-color: transparent;
-  background-image: url("../../build/assets/pencil-9d0227c6.svg");
+  background-image: url("../../build/assets/pencil-DmjuWQZo.svg");
   background-size: cover;
   filter: invert(1) brightness(0.37) sepia(1) hue-rotate(88deg) saturate(2);
   cursor: pointer;
@@ -251,7 +251,7 @@
   height: 32px;
   vertical-align: middle;
   background-color: transparent;
-  background-image: url("../../build/assets/x-48d5345d.svg");
+  background-image: url("../../build/assets/x-BuMA1epH.svg");
   background-size: 52px;
   background-position: -10px -8px;
   filter: invert(1) brightness(0.3) sepia(1) hue-rotate(300deg) saturate(4);
